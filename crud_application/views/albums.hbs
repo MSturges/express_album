@@ -1,0 +1,23 @@
+<h1>Albums</h1>
+
+<a href='/albums/creators'>New Albums</a>
+<br></br>
+
+<table>
+  <tr>
+    <th>Genre:</th>
+    <th>Artist:</th>
+    <th>Album Name:</th>
+    <th></th>
+  </tr>
+  {{#albums}}
+  <tr>
+    <th>{{genre}}</th>
+    <th>{{artist}}</th>
+    <th><a href='albums/{{id}}'>{{name}}</a></th>
+    <td>
+      <form action="/albums/delete/{{id}}" method="post">
+      <input type="submit" value="delete"> </form></td>
+    </tr>
+  {{/albums}}
+</table>
